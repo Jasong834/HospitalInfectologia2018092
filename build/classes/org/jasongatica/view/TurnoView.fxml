@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="643.0" style="-fx-background-color: #10BAA2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jasongatica.controller.TurnoController">
+   <children>
+      <MenuBar layoutY="-1.0" prefHeight="25.0" prefWidth="643.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanResponsable" text="Responsable del Turno" />
+                  <MenuItem mnemonicParsing="false" onAction="#venatanPacientes" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicoEspecialidad" text="Especialidad del Medico" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="271.0" layoutY="32.0" text="Turno">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="87.0" text="Codigo" />
+      <Label layoutX="44.0" layoutY="128.0" text="Fecha" />
+      <Label layoutX="32.0" layoutY="171.0" text="Fecha Cita" />
+      <Label layoutX="34.0" layoutY="211.0" text="Valor Cita" />
+      <Label layoutX="344.0" layoutY="87.0" text="Responsable" />
+      <Label layoutX="358.0" layoutY="128.0" text="Paciente" />
+      <Label layoutX="306.0" layoutY="171.0" text="Especialidad del Medico" />
+      <ComboBox fx:id="cmbCodigo" disable="true" editable="true" layoutX="99.0" layoutY="83.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbResponsable" disable="true" editable="true" layoutX="478.0" layoutY="82.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbPaciente" disable="true" editable="true" layoutX="478.0" layoutY="123.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbEpecialidadMedico" disable="true" editable="true" layoutX="478.0" layoutY="166.0" prefWidth="150.0" />
+      <TextField fx:id="txtFecha" disable="true" layoutX="100.0" layoutY="124.0" promptText="YYYY-MM-DD " />
+      <TextField fx:id="txtCita" disable="true" layoutX="100.0" layoutY="167.0" promptText="YYYY-MM-DD " />
+      <TextField fx:id="txtValor" disable="true" layoutX="100.0" layoutY="207.0" />
+      <TableView fx:id="tblTurno" layoutX="66.0" layoutY="253.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="528.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="colFecha" prefWidth="75.0" text="Fecha" />
+            <TableColumn fx:id="colCita" prefWidth="75.0" text="Cita" />
+            <TableColumn fx:id="colValor" prefWidth="75.0" text="Valor" />
+            <TableColumn fx:id="colResponsable" prefWidth="75.0" text="Responsable" />
+            <TableColumn fx:id="colPaciente" prefWidth="75.0" text="Paciente" />
+            <TableColumn fx:id="colEspecialidad" prefWidth="75.0" text="Especialidad" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="93.0" layoutY="470.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="67.0" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="238.0" layoutY="470.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="80.0" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="386.0" layoutY="470.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="67.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="519.0" layoutY="470.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="25.0" prefWidth="67.0" text="Reporte" />
+   </children>
+</AnchorPane>

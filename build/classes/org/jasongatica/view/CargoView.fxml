@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="374.0" prefWidth="537.0" style="-fx-background-color: #10BAA2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jasongatica.controller.CargoController">
+   <children>
+      <Label layoutX="211.0" layoutY="29.0" text="Cargos">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="92.0" text="Codigo" />
+      <Label layoutX="269.0" layoutY="92.0" text="Nombre" />
+      <ComboBox fx:id="cmbCodigoCargo" disable="true" editable="true" layoutX="70.0" layoutY="88.0" prefWidth="150.0" />
+      <TextField fx:id="txtNombreCargo" disable="true" layoutX="344.0" layoutY="88.0" />
+      <TableView fx:id="tblCargo" layoutX="169.0" layoutY="135.0" onMouseClicked="#seleccionar" prefHeight="167.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colCodigoCargo" prefWidth="90.0" text="Codigo" />
+          <TableColumn fx:id="colNombreCargo" prefWidth="108.0" text="Nombre del cargo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="55.0" layoutY="320.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="32.0" prefWidth="83.0" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="169.0" layoutY="320.0" mnemonicParsing="false" onAction="#editar" prefHeight="32.0" prefWidth="83.0" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="286.0" layoutY="320.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="83.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="399.0" layoutY="320.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="32.0" prefWidth="83.0" text="Reporte" />
+      <MenuBar prefHeight="32.0" prefWidth="537.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

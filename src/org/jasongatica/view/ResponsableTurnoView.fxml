@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="647.0" style="-fx-background-color: #10BAA2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jasongatica.controller.ResponsableTurnoController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="647.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaArea" text="Areas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargo" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="144.0" layoutY="32.0" text="Responsable del Turno">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigo" disable="true" editable="true" layoutX="120.0" layoutY="85.0" prefHeight="17.0" prefWidth="149.0" />
+      <ComboBox fx:id="cmbCargo" disable="true" editable="true" layoutX="411.0" layoutY="162.0" prefHeight="17.0" prefWidth="149.0" />
+      <ComboBox fx:id="cmbArea" disable="true" editable="true" layoutX="411.0" layoutY="124.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="txtNombre" disable="true" layoutX="120.0" layoutY="124.0" />
+      <TextField fx:id="txtApellido" disable="true" layoutX="120.0" layoutY="162.0" />
+      <TextField fx:id="txtTelefono" disable="true" layoutX="411.0" layoutY="85.0" />
+      <Label layoutX="40.0" layoutY="89.0" text="Codigo" />
+      <Label layoutX="38.0" layoutY="128.0" text="Nombre" />
+      <Label layoutX="38.0" layoutY="166.0" text="Apellido" />
+      <Label layoutX="323.0" layoutY="89.0" text="Telefono" />
+      <Label layoutX="334.0" layoutY="128.0" text="Area" />
+      <Label layoutX="331.0" layoutY="166.0" text="Cargo" />
+      <TableView fx:id="tblResponsable" layoutX="109.0" layoutY="198.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="75.0" text="Apellido" />
+            <TableColumn fx:id="colTelefono" prefWidth="75.0" text="Telefono" />
+            <TableColumn fx:id="colArea" prefWidth="75.0" text="Area" />
+            <TableColumn fx:id="colCargo" prefWidth="75.0" text="Cargo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="60.0" layoutY="433.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="79.0" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="207.0" layoutY="433.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="79.0" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="347.0" layoutY="433.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="79.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="491.0" layoutY="433.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="25.0" prefWidth="79.0" text="Reporte" />
+   </children>
+</AnchorPane>

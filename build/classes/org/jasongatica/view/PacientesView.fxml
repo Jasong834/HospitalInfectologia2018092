@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="757.0" style="-fx-background-color: #10BAA2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jasongatica.controller.PacientesController">
+   <children>
+      <ComboBox fx:id="cmbCodigoPacientes" disable="true" editable="true" layoutX="90.0" layoutY="61.0" prefWidth="150.0" />
+      <Label layoutX="23.0" layoutY="66.0" text="Codigo" />
+      <Label layoutX="17.0" layoutY="101.0" text="Nombres" />
+      <TextField fx:id="txtNombres" disable="true" layoutX="90.0" layoutY="96.0" prefHeight="25.0" prefWidth="490.0" />
+      <Label layoutX="16.0" layoutY="139.0" text="Apellidos" />
+      <TextField fx:id="txtApellidos" disable="true" layoutX="90.0" layoutY="134.0" prefHeight="25.0" prefWidth="490.0" />
+      <Label layoutX="490.0" layoutY="211.0" text="Nacimiento" />
+      <Label layoutX="501.0" layoutY="176.0" text="Edad" />
+      <TextField fx:id="txtEdad" disable="true" layoutX="575.0" layoutY="172.0" prefHeight="25.0" prefWidth="149.0" promptText="YYYY-MM-DD " />
+      <Label layoutX="220.0" layoutY="176.0" text="Direccion" />
+      <TextField fx:id="txtDireccion" disable="true" layoutX="297.0" layoutY="172.0" />
+      <Label layoutX="11.0" layoutY="176.0" text="Ocupacion" />
+      <TextField fx:id="txtOcupacion" disable="true" layoutX="90.0" layoutY="172.0" prefHeight="25.0" prefWidth="118.0" />
+      <Label layoutX="235.0" layoutY="211.0" text="Sexo" />
+      <TextField fx:id="txtSexo" disable="true" layoutX="297.0" layoutY="207.0" />
+      <TableView fx:id="tblPacientes" layoutX="18.0" layoutY="244.0" onMouseClicked="#seleccionar" prefHeight="214.0" prefWidth="677.0">
+        <columns>
+          <TableColumn fx:id="colCodigoPacientes" prefWidth="75.0" text="Codigo " />
+          <TableColumn fx:id="colDPI" prefWidth="75.0" text="DPI" />
+            <TableColumn fx:id="colNombres" prefWidth="75.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="75.0" text="Apellidos" />
+            <TableColumn fx:id="colNacimiento" prefWidth="75.0" text="Nacimiento" />
+            <TableColumn fx:id="colEdad" prefWidth="75.0" text="Edad" />
+            <TableColumn fx:id="colDireccion" prefWidth="75.0" text="Direccion" />
+            <TableColumn fx:id="colOcupacion" prefWidth="75.0" text="Ocupacion" />
+            <TableColumn fx:id="colSexo" prefWidth="75.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Label layoutX="263.0" layoutY="23.0" text="Pacientes">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="211.0" text="DPI" />
+      <TextField fx:id="txtDPI" disable="true" layoutX="90.0" layoutY="206.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="txtNacimiento" disable="true" layoutX="574.0" layoutY="207.0" prefHeight="31.0" prefWidth="150.0" />
+      <Button fx:id="btnAgregar" layoutX="84.0" layoutY="464.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="88.0" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="229.0" layoutY="464.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="88.0" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="371.0" layoutY="464.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="88.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="517.0" layoutY="464.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="25.0" prefWidth="88.0" text="Reporte" />
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="757.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaContacto" text="Contacto de urgencia" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

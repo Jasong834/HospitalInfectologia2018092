@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="602.0" style="-fx-background-color: #10BAA2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jasongatica.controller.MedicoController">
+   <children>
+      <Label layoutX="37.0" layoutY="78.0" text="Codigo" />
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="108.0" layoutY="74.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="130.0" text="Nombres" />
+      <TextField fx:id="txtNombres" disable="true" editable="false" layoutX="108.0" layoutY="118.0" prefHeight="25.0" prefWidth="441.0" />
+      <Label layoutX="301.0" layoutY="206.0" text="Entrada" />
+      <Label layoutX="44.0" layoutY="206.0" text="Sexo" />
+      <TextField fx:id="txtSexo" disable="true" editable="false" layoutX="109.0" layoutY="202.0" />
+      <TableView fx:id="tblMedicos" layoutX="13.0" layoutY="278.0" onMouseClicked="#seleccionar" prefHeight="190.0" prefWidth="582.0">
+        <columns>
+          <TableColumn fx:id="colCodigoMedico" prefWidth="91.0" text="Codigo Medico" />
+          <TableColumn fx:id="colLicencia" prefWidth="86.0" text="Licencia" />
+            <TableColumn fx:id="colNombres" prefWidth="85.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" text="Apellidos" />
+            <TableColumn fx:id="colEntrada" prefWidth="90.0" text="Entrada" />
+            <TableColumn fx:id="colSalida" prefWidth="82.0" text="Salida" />
+            <TableColumn fx:id="colSexo" prefWidth="67.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Label layoutX="36.0" layoutY="243.0" text="Licencia" />
+      <TextField fx:id="txtLicenciaMedica" disable="true" editable="false" layoutX="109.0" layoutY="239.0" />
+      <TextField fx:id="txtApellidos" disable="true" editable="false" layoutX="108.0" layoutY="160.0" prefHeight="25.0" prefWidth="441.0" />
+      <Label layoutX="313.0" layoutY="243.0" text="Salida" />
+      <Label layoutX="32.0" layoutY="164.0" text="Apellidos" />
+      <Label layoutX="220.0" layoutY="25.0" text="Medicos">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAgregar" layoutX="62.0" layoutY="478.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="88.0" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="183.0" layoutY="478.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="88.0" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="307.0" layoutY="478.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="88.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="430.0" layoutY="478.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="25.0" prefWidth="88.0" text="Reporte" />
+      <TextField fx:id="txtEntrada" disable="true" layoutX="362.0" layoutY="202.0" prefHeight="25.0" prefWidth="185.0" promptText="YYYY-MM-DD HH:MM" />
+      <TextField fx:id="txtSalida" disable="true" layoutX="362.0" layoutY="239.0" prefHeight="25.0" prefWidth="185.0" promptText="YYYY-MM-DD HH:MM" />
+      <MenuBar prefHeight="25.0" prefWidth="602.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaTelefonosMedicos" text="Telefonos de Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicoEspecialidad" text="Especialidad del Medico" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

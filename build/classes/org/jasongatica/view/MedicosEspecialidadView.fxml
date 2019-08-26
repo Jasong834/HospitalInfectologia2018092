@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="617.0" style="-fx-background-color: #10BAA2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jasongatica.controller.MedicoEspecialidadController">
+   <children>
+      <Label layoutX="103.0" layoutY="27.0" text="Especialidad de Medicos" textFill="#0a0a0a">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigo" disable="true" editable="true" layoutX="104.0" layoutY="89.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbHorario" disable="true" editable="true" layoutX="390.0" layoutY="89.0" prefHeight="25.0" prefWidth="191.0" />
+      <ComboBox fx:id="cmbEspecialidad" disable="true" editable="true" layoutX="104.0" layoutY="124.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbMedico" disable="true" editable="true" layoutX="390.0" layoutY="124.0" prefHeight="25.0" prefWidth="191.0" />
+      <Label layoutX="32.0" layoutY="93.0" text="Codigo" />
+      <Label layoutX="19.0" layoutY="128.0" text="Especialidad" />
+      <Label layoutX="309.0" layoutY="93.0" text="Horario" />
+      <Label layoutX="309.0" layoutY="128.0" text="Medico" />
+      <TableView fx:id="tblEspecialidadMedicos" layoutX="157.0" layoutY="175.0" onMouseClicked="#seleccionar" prefHeight="153.0" prefWidth="303.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="colEspecialidad" prefWidth="75.0" text="Especialidad" />
+            <TableColumn fx:id="colHorario" prefWidth="75.0" text="Horario" />
+            <TableColumn fx:id="colMedico" prefWidth="75.0" text="Medico" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="52.0" layoutY="353.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="76.0" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="179.0" layoutY="353.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="76.0" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="329.0" layoutY="353.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="76.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="477.0" layoutY="353.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="25.0" prefWidth="76.0" text="Reporte" />
+      <MenuBar prefHeight="25.0" prefWidth="617.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaMedico" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEspecialidad" text="Especialidad" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

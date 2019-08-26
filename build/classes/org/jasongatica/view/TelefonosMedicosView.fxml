@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="587.0" style="-fx-background-color: #10BAA2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jasongatica.controller.TelefonosMedicosController">
+   <children>
+      <Label layoutX="22.0" layoutY="107.0" text="Codigo Del Telefono" />
+      <Label layoutX="305.0" layoutY="141.0" text="Telefono De Trabajo" />
+      <Label layoutX="30.0" layoutY="145.0" text="Telefono Personal" />
+      <Label layoutX="305.0" layoutY="103.0" text="Codigo Del Medico" />
+      <ComboBox fx:id="cmbCodigoTelefono" disable="true" editable="true" layoutX="149.0" layoutY="103.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbMedico" disable="true" editable="true" layoutX="414.0" layoutY="99.0" prefWidth="150.0" />
+      <TextField fx:id="txtPersonal" disable="true" layoutX="150.0" layoutY="141.0" />
+      <TextField fx:id="txtTrabajo" disable="true" layoutX="415.0" layoutY="137.0" />
+      <TableView fx:id="tblTelefonosMedicos" layoutX="85.0" layoutY="187.0" onMouseClicked="#seleccionar" prefHeight="173.0" prefWidth="441.0">
+        <columns>
+          <TableColumn fx:id="colCodigoTelefonos" prefWidth="94.0" text="Codigo" />
+          <TableColumn fx:id="colPersonal" prefWidth="119.0" text="Telefono Personal" />
+            <TableColumn fx:id="colTrabajo" prefWidth="110.0" text="Telefono Trabajo" />
+            <TableColumn fx:id="colMedico" minWidth="0.0" prefWidth="117.0" text="Codigo Del Medico" />
+        </columns>
+      </TableView>
+      <Label layoutX="140.0" layoutY="37.0" text="Telefonos Medicos">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAgregar" layoutX="54.0" layoutY="374.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="88.0" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="187.0" layoutY="374.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="88.0" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="315.0" layoutY="374.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="88.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="445.0" layoutY="374.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="25.0" prefWidth="88.0" text="Reporte" />
+      <MenuBar prefHeight="32.0" prefWidth="587.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaMedicos" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

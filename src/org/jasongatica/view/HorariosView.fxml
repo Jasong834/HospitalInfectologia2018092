@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="imprimirReporte" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="633.0" style="-fx-background-color: #10BAA2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jasongatica.controller.HorarioController">
+   <children>
+      <Label layoutX="244.0" layoutY="36.0" text="Horarios">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoHorario" disable="true" editable="true" layoutX="110.0" layoutY="85.0" prefWidth="150.0" />
+      <Label layoutX="44.0" layoutY="89.0" text="Codigo" />
+      <TextField fx:id="txtHoraInicio" disable="true" layoutX="111.0" layoutY="124.0" promptText="YYYY-MM-DD HH:MM" />
+      <TextField fx:id="txtHoraSalida" disable="true" layoutX="111.0" layoutY="163.0" promptText="YYYY-MM-DD HH:MM" />
+      <Label layoutX="25.0" layoutY="128.0" prefHeight="17.0" prefWidth="77.0" text="Horario Inicio" />
+      <Label layoutX="23.0" layoutY="167.0" prefHeight="17.0" prefWidth="77.0" text="Horario Salida" />
+      <Label layoutX="48.0" layoutY="205.0" text="Lunes" />
+      <Label layoutX="329.0" layoutY="89.0" text="Martes" />
+      <Label layoutX="322.0" layoutY="128.0" text="Miercoles" />
+      <Label layoutX="330.0" layoutY="167.0" text="Jueves" />
+      <Label layoutX="328.0" layoutY="205.0" text="Viernes" />
+      <TextField fx:id="txtMartes" disable="true" layoutX="408.0" layoutY="85.0" />
+      <TextField fx:id="txtMiercoles" disable="true" layoutX="408.0" layoutY="124.0" />
+      <TextField fx:id="txtJueves" disable="true" layoutX="408.0" layoutY="163.0" />
+      <TextField fx:id="txtLunes" disable="true" layoutX="111.0" layoutY="201.0" />
+      <TextField fx:id="txtViernes" disable="true" layoutX="408.0" layoutY="201.0" />
+      <TableView fx:id="tblHorarios" layoutX="15.0" layoutY="243.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="603.0">
+        <columns>
+          <TableColumn fx:id="colCodigoHorario" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="colInicio" prefWidth="75.0" text="Inicio" />
+            <TableColumn fx:id="colSalida" prefWidth="75.0" text="Salida" />
+            <TableColumn fx:id="colLunes" prefWidth="75.0" text="Lunes" />
+            <TableColumn fx:id="colMartes" prefWidth="75.0" text="Martes" />
+            <TableColumn fx:id="colMiercoles" prefWidth="75.0" text="Miercoles" />
+            <TableColumn fx:id="colJueves" prefWidth="75.0" text="Jueves" />
+            <TableColumn fx:id="colViernes" prefWidth="75.0" text="Viernes" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="83.0" layoutY="454.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="77.0" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="222.0" layoutY="454.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="77.0" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="356.0" layoutY="454.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="77.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="483.0" layoutY="454.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="25.0" prefWidth="77.0" text="Reporte" />
+      <MenuBar prefHeight="32.0" prefWidth="633.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
